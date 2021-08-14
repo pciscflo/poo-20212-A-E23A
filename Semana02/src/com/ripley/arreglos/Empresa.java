@@ -10,9 +10,8 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Empresa(String nombre, List<Auto> autos) {
+    public Empresa(String nombre) {
         this.nombre = nombre;
-        this.autos = autos;
         this.autos = new ArrayList<>();
     }
 
