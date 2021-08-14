@@ -16,7 +16,8 @@ public class Ejercicio2 {
             System.out.println(p.getCodigo() + "  " + p.getMarca()+ "  " + p.getModelo() + "  " +
                    p.getAño() + "  " + p.getPrecio() + "  " + p.calcularDescuento() + "  " + p.calcularPrecioFinal());
         }
-
+        //buscar un auto segun codigo y cambiar su precio
 
     }
+
 }
