@@ -15,7 +15,8 @@ public class Empresa {
         this.autos = new ArrayList<>();
     }
 
-    public void registrar(Auto auto){
+    public void registrar(String codigo, String marca, String modelo, double precio, int numeroPuertas, int año){
+        Auto auto = new Auto(codigo, marca, modelo, precio, numeroPuertas, año);
         this.autos.add(auto);
     }
     public String buscarActualizar(String codigo, double nuevoPrecio){
