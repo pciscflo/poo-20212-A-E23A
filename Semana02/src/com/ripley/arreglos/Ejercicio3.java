@@ -1,5 +1,6 @@
 package com.ripley.arreglos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ejercicio3 {
@@ -17,7 +18,14 @@ public class Ejercicio3 {
         autos = empresa.getAutos();
 
         for(Auto p:autos){
-            System.out.println(p.getCodigo());
+            System.out.println(p.getCodigo() + "  " + p.getPrecio());
+        }
+
+        empresa.buscarActualizar("B2002", 25000);
+        System.out.println("*************************");
+
+        for(Auto p:autos){
+            System.out.println(p.getCodigo() + "   " + p.getPrecio());
         }
 
 
