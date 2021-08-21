@@ -12,5 +12,7 @@ public class Ejercicio2 {
         for(Profesor p:administrador.getProfesores()){
             System.out.println(p.getNombre() + "   " + p.calcularSueldo());
         }
+        Profesor profesor = administrador.ganaMas();
+        System.out.println("Gana mas:" + profesor.getNombre() + "  " + profesor.calcularSueldo());
     }
 }
