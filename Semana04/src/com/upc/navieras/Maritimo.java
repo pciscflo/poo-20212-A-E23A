@@ -25,7 +25,7 @@ public class Maritimo extends Envio{
     }
 
     public String obtenerFila(){//la idea es no usar println en las clases modelo sólo en main
-        return getCodigo()+ "  "+ getRazonSocial() + "  " + getVolumenMetrico()+
+        return getCodigo()+ "  "+ this.razonSocial + "  " + getVolumenMetrico()+
         "  " + getCategoria() + "  " + calcularCosto();
     }
 }
