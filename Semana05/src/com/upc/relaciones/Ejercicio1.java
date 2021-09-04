@@ -18,13 +18,21 @@ public class Ejercicio1 {
         factura1.registrarItem(item3);
 
         System.out.println("Nro Factura:" + factura1.getCabecera().getNumeroFactura());
-
-        System.out.println("Total:" + factura1.calcularTotal());
+        System.out.println("--------------------------------------------------");
+        for(Item p:factura1.getArregloItems()){
+            System.out.println(p.getProducto().getDescripcion()+ "  " + p.getProducto().getPrecio()+ "   "+
+                    p.getCantidad() + "   " + p.calcularSubTotal());
+        }
+        System.out.println("--------------------------------------------------");
         System.out.println("IGV: " + factura1.calcularIGV());
+        System.out.println("Total:" + factura1.calcularTotal());
 
-
-
-
+        Administrador administrador = new Administrador();
+        administrador.registrar(factura1);
+        Factura fac  = administrador.buscarFactura(1001);
+        if(fac!=null)
+        System.out.println("Factura Encontrada:" + fac.getCabecera().getDireccion());
+        else System.out.println("No existe");
 
 
 
