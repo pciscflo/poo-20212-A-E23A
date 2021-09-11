@@ -16,13 +16,13 @@ public class Tienda {
     public int contarCantidadBicicletasMontañeras(){
         int contador=0;
         for(Bicicleta p:this.arregloBicicletas){
-            if(p.getClass()==Montañeras.class){
+            if(p.getClass()== Montañera.class){
                 contador++;
             }
         }
         return contador;
     }
-    public List<Bicicleta> obtenerBicicletasMontañeras(Class tipo){
+    public List<Bicicleta> obtenerBicicletas(Class tipo){
         List<Bicicleta> temporal = new ArrayList<>();
         for(Bicicleta p: this.arregloBicicletas){
             if(p.getClass() == tipo){

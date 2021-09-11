@@ -1,15 +1,15 @@
 package com.upc.relaciones;
 
-public class Montañeras extends Bicicleta {
+public class Montañera extends Bicicleta {
 
     private String tipoSuspension;
 
-    public Montañeras(String material, int tamañoRuedas, int cantidadPlatosCambios, String tipoSuspension) {
+    public Montañera(String material, int tamañoRuedas, int cantidadPlatosCambios, String tipoSuspension) {
         super(material, tamañoRuedas, cantidadPlatosCambios);
         this.tipoSuspension = tipoSuspension;
     }
 
-    public Montañeras() {
+    public Montañera() {
     }
 
     @Override
