@@ -3,17 +3,25 @@ package com.upc.factoria.navieras;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JefeEnvios {
-    private List<Envio> envios; // ArrayList<Envio> envios;//no es correcto
-    private String nombre;
+public class JefeEnvios {  //DAO BDs Persistentes
+    private static JefeEnvios jefeEnvios = new JefeEnvios();
+    private static List<Envio> envios; // ArrayList<Envio> envios;//no es correcto
+    private String nombre;//DAO No tiene atributos
 
-    public JefeEnvios() {
+    private JefeEnvios() {
     }
 
-    public JefeEnvios( String nombre) {
+    public static JefeEnvios obtenerInstancia(String nombre){
+        jefeEnvios.setNombre(nombre);
+        envios =  new ArrayList<>();
+        return jefeEnvios;
+    }
+
+    private JefeEnvios( String nombre) {
         this.nombre = nombre;
         envios =  new ArrayList<>();
     }
+
 
     public void registrarEnvio(Envio envio){  //Envio <--- Maritimo o Utramaritimo // Liskov
         if( validarDuplicidad(envio) ) {
