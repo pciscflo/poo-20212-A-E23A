@@ -15,5 +15,6 @@ public class Ejercicio2 {
         }
         Profesor profesor = administrador.ganaMas();
         System.out.println("Gana mas:" + profesor.getNombre() + "  " + profesor.calcularSueldo());
+        //end class
     }
 }
