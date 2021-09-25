@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JefeEnvios {  //DAO BDs Persistentes
-    private static JefeEnvios jefeEnvios = new JefeEnvios();
+    private static JefeEnvios jefeEnvios = new JefeEnvios();//*****
+
     private static List<Envio> envios; // ArrayList<Envio> envios;//no es correcto
     private String nombre;//DAO No tiene atributos
 
-    private JefeEnvios() {
+    private JefeEnvios() {//******
     }
 
-    public static JefeEnvios obtenerInstancia(String nombre){
+    public static JefeEnvios obtenerInstancia(String nombre){//******
         jefeEnvios.setNombre(nombre);
         envios =  new ArrayList<>();
         return jefeEnvios;
